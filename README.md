@@ -24,6 +24,7 @@ A solução soluciona o desafio da assimetria de informação nos portais públi
 
 O projeto segue princípios de Engenharia de Software focados em separação de responsabilidades, modularidade e reprodutibilidade de dados[cite: 4, 7]:
 
+```text
 portal-transparencia-poc/
 │
 ├── dados/
@@ -40,7 +41,7 @@ portal-transparencia-poc/
 ├── requirements.txt         # Especificação de dependências com versões testadas
 ├── .gitignore               # Regras de exclusão de dados pesados e temporários
 └── README.md                # Documentação técnica e guia operacional do sistema
-
+```
 Tecnologias e Bibliotecas Empregadas:
 * Linguagem Base: Python 3.10 ou superior
 * Ingestão e Manipulação: Pandas, NumPy
