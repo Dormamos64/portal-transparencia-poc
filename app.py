@@ -81,12 +81,29 @@ st.markdown("""
 # -----------------------------------------------------------------------------
 # 2. CARREGAMENTO DOS DADOS COM CACHE
 # -----------------------------------------------------------------------------
+# -----------------------------------------------------------------------------
+# 2. CARREGAMENTO DOS DADOS COM CACHE
+# -----------------------------------------------------------------------------
 @st.cache_data(show_spinner="A carregar base de despesas públicas...")
 def carregar_dados_consolidados():
-    caminho = os.path.join("dados", "processed", "despesas_es_consolidado.csv")
-    if not os.path.exists(caminho):
+    caminho_amostra = os.path.join("dados", "processed", "despesas_es_amostra.csv")
+    caminho_completo = os.path.join("dados", "processed", "despesas_es_consolidado.csv")
+    
+    # Dá prioridade à amostra (ideal para o Streamlit Cloud / GitHub)
+    if os.path.exists(caminho_amostra):
+        caminho = caminho_amostra
+    elif os.path.exists(caminho_completo):
+        caminho = caminho_completo
+    else:
         return None
+        
     return pd.read_csv(caminho, sep=";", low_memory=False)
+
+df_raw = carregar_dados_consolidados()
+
+if df_raw is None:
+    
+    st.error("❌ Base de despesas não encontrada!")
 
 df_raw = carregar_dados_consolidados()
 
