@@ -24,6 +24,7 @@ A solução soluciona o desafio da assimetria de informação nos portais públi
 
 O projeto segue princípios de Engenharia de Software focados em separação de responsabilidades, modularidade e reprodutibilidade de dados[cite: 4, 7]:
 
+```text
 portal-transparencia-poc/
 │
 ├── dados/
@@ -40,7 +41,7 @@ portal-transparencia-poc/
 ├── requirements.txt         # Especificação de dependências com versões testadas
 ├── .gitignore               # Regras de exclusão de dados pesados e temporários
 └── README.md                # Documentação técnica e guia operacional do sistema
-
+```
 Tecnologias e Bibliotecas Empregadas:
 * Linguagem Base: Python 3.10 ou superior
 * Ingestão e Manipulação: Pandas, NumPy
@@ -140,3 +141,4 @@ Casos de Teste Verificados:
 * Privacidade e LGPD: Os dados processados provêm do Portal da Transparência do Espírito Santo. Identificadores de pessoas físicas (CPF) já chegam ofuscados na fonte (###.***.***-##), evitando a exposição indevida de dados pessoais[cite: 4].
 * Isenção de Juízo Automático: Conforme previsto no edital, modalidades como dispensa ou inexigibilidade não são tratadas pelo software como prova automática de irregularidade, mas sim como fatos contábeis oficiais registrados[cite: 4].
 * Limitações Técnicas Conhecidas: A POC opera sobre os exercícios oficiais de 2024 e 2025[cite: 3, 4]. Eventuais inconsistências de preenchimento oriundas do próprio sistema estadual são identificadas com a menção NÃO INFORMADO.
+...
