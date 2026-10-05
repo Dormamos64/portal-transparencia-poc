@@ -1,2 +1,6 @@
-dados/raw/*.zip
-dados/processed/
+# Mantém os dados pesados e originais protegidos fora do repositório
+dados/raw/
+dados/processed/despesas_es_consolidado.csv
+
+# Abre exceção estrita para o CSV leve do deploy na nuvem
+!dados/processed/despesas_es_amostra.csv
